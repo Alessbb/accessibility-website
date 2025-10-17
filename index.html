@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="it">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Un sito web accessibile e inclusivo per tutti gli utenti">
+    <link rel="shortcut icon" href="Logob.png" type="image/png">
+    <title>Modello di Sito Accessibile e Inclusivo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="Stylemodel.css">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <!--Necessario per bottone disabilitato-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+    
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+            <!--Navbar-->
+            <nav class="navbar navbar-dark col-auto p-4" aria-labelledby="Main-menu">
+      <h2 id="Main-menu" class="d-none">Menu Principale</h2>
+       <div class="container-fluid m-0 p-0">         
+            <div class="row btn-row d-flex justify-content-between  flex-nowrap align-items-center">
+      <button id="menu-toggle" class="navbar-toggler col-auto" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Apri menu">
+      <span class="navbar-toggler-icon" aria-hidden="true"></span>
+    <span class="sr-only">Apri menu</span>
+      </button>
+<div class="collapse navbar-collapse" id="main-menu">
+    <ul class="navbar-nav mb-2 d-flex justify-content-start">
+        <li class="nav-item">
+          <a class="nav-link active p-3" aria-current="page" href="index.html"><span class="d-none">Pagina Attuale: </span>Home</a>
+        </li>
+        <li class="nav-item">
+                  <a class="nav-link p-3 me-5" href="#slideshow">Slideshow accessibile</a>
+              </li>
+        <li class="nav-item">
+                  <a class="nav-link p-3" href="#text">Testo accessibile</a>
+              </li>
+        <li class="nav-item">
+                  <a class="nav-link p-3" href="#video">Video accessibile</a>
+              </li>
+        <li class="nav-item">
+                  <a class="nav-link p-3" href="#chisiamo">Chi siamo</a>
+              </li>
+        <li class="nav-item">
+          <a class="nav-link p-3 mb-3" href="It_Form.html"
+             >Contattaci</a>
+        </li>    
+      </ul>
+    </div>
+                <!-- Modalità Alto Contrasto -->
+            <div class="col-auto form-check form-switch">
+            <input class="form-check-input" type="checkbox" onclick="toggleContrast()" id="HighContrast">
+                </div>
+        
+            <!-- Regolazione dimensione del testo -->
+                <div class="col-auto">
+                <button class="control-btn btn-font" id="increase-font" aria-label="Aumenta la dimensione del testo" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="Aumenta dimensione testo">aA+</button>
+                <button class="control-btn btn-font" id="decrease-font" aria-label="Riduci la dimensione del testo"  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="Riduci dimensione testo">aA-</button>
+            </div>
+                
+           <!-- Selettore lingua -->
+           <div class="col-auto">
+               <select class="form-select h-100 w-auto" aria-label="Seleziona lingua" onchange="changeLanguage(this.value)" style="width: auto;">
+                <option value="index.html" selected>IT</option>
+                    <option value="En_Index.html">EN</option>
+               </select>
+           </div>
+                </div>
+           </div> 
+</nav>
+                   
+    
+        <header>
+  <div class="container-fluid">
+      <a class="navbar-brand ms-2" href="index.html">
+          <img src="logo.png" alt="Logo dell'azienda" class="logo">
+      </a>
+            </div>
+        
+</header>
+    <!-- Contenuto principale -->
+    <main id="home" class="container py-4">
+       
+        
+        <section class="mx-3 mb-4 pt-3">
+            <h1 class="mb-4">Benvenuti sul sito della AV Agency</h1>
+            <p>Sei entrato in un sito accessibile!</p>
+            <p>Il sito è progettato per garantire la massima inclusione e usabilità per tutta l'utenza.</p>
+            <p>Naviga il sito per scoprire alcuni esempi.</p>
+        </section>
+        
+        <section id="slideshow" class="mx-3 py-3 card shadow">
+            <div class="card-body">
+    <h2 class="mb-4 card-title">Slideshow accessibile</h2>
+            
+    <div class="row d-flex justify-content-center">
+        <div class="carousel slide col-11 col-md-12 m-3" data-bs-ride="false" id="carouselshow">
+            <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselshow" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselshow" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselshow" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p class="card-text">Il nostro team lavora sodo per raggiungere gli obiettivi prefissati da voi</p>
+                    <div class="image-container">
+                        <img src="img1.png" alt="Immagine Team al Lavoro" class=" image d-block w-100">
+                        <button class="carousel-control-prev sliderbtn p-3 ms-2 text-dark" onclick="changeSlide(-1)" data-bs-target="#carouselshow" data-bs-slide="prev">&#10094;</button>
+            <button class="carousel-control-next sliderbtn p-3 me-2 text-dark" onclick="changeSlide(1)" data-bs-target="#carouselshow" data-bs-slide="next">&#10095;</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <p class="card-text">La squadra sogna in grande per trovare le soluzioni adatte a ogni quesito</p>
+                    <div class="image-container">
+                        <img src="img2.png" alt="Immagine Team" class="image d-block w-100">
+                        <button class="carousel-control-prev sliderbtn p-3 ms-2 text-dark" onclick="changeSlide(-1)" data-bs-target="#carouselshow" data-bs-slide="prev">&#10094;</button>
+            <button class="carousel-control-next sliderbtn p-3 me-2 text-dark" onclick="changeSlide(1)" data-bs-target="#carouselshow" data-bs-slide="next">&#10095;</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <p class="card-text">Si tratta di un team molto unito: collaborazione è la nostra parola d'ordine</p>
+                    <div class="image-container">
+                        <img src="img3.png" alt="Immagine Team Unito" class="image d-block w-100">
+                        <button class="carousel-control-prev sliderbtn p-3 ms-2 text-dark" onclick="changeSlide(-1)" data-bs-target="#carouselshow" data-bs-slide="prev">&#10094;</button>
+            <button class="carousel-control-next sliderbtn p-3 me-2 text-dark" onclick="changeSlide(1)" data-bs-target="#carouselshow" data-bs-slide="next">&#10095;</button>
+                    </div>
+                </div>
+    </div>
+                </div>
+            
+        </div>
+    </div>
+        <div class="row d-flex align-items-center flex-nowrap justify-content-between m-2">
+    <div class="col-auto">
+        <div class="zoom-controls">
+            <button class="zoom-btn" onclick="zoomImage('in')">+</button>
+            <button class="zoom-btn" onclick="zoomImage('out')">-</button>
+        </div>
+    </div>
+    <div class="col-auto">
+        <button class="slider-pause" onclick="toggleSliderPause()">Pausa</button>
+    </div>
+</div>
+</section>
+        
+        <section id="text" class="m-3 py-4">
+        <h2 class="mb-2 ms-2">Testo accessibile</h2>
+<div class="row my-2 d-flex justify-content-center align-items-center">
+    <button onclick="startReading()" id="speak-button" class="col-auto m-2 d-flex justify-content-center align-items-center" aria-label="Avvia/Pausa lettura ad alta voce"  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" title="Avvia/Pausa lettura ad alta voce"> 
+        <span id="pause-icon">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" zoomAndPan="magnify" viewBox="0 0 1600 1000" fill="currentColor" height="50"  preserveAspectRatio="xMidYMid meet"><g clip-path="url(#8af722a07a)"><path d="M 970.980469 360.125 L 970.980469 348.355469 C 974.664062 341.972656 983.734375 321.976562 978.066406 287.371094 C 973.386719 257.730469 965.734375 240.851562 961.90625 233.621094 C 967.433594 223.265625 977.640625 195.046875 949.71875 156.46875 C 844.652344 45.597656 433.210938 21.378906 407.5625 327.367188 C 400.046875 425.363281 442.144531 526.054688 517.691406 590.441406 C 517.976562 590.726562 554.96875 623.484375 512.589844 779.914062 C 511.316406 784.21875 514.808594 789.050781 519.394531 788.847656 C 519.394531 788.847656 798.761719 788.847656 798.761719 788.847656 C 801.03125 788.847656 803.15625 787.855469 804.574219 786.011719 C 805.851562 784.027344 806.132812 781.757812 805.425781 779.488281 C 796.210938 752.542969 785.441406 703.898438 795.503906 688.296875 C 797.457031 685.269531 800.242188 684.054688 803.726562 683.757812 C 847.804688 691.84375 894.582031 693.402344 896.992188 693.402344 C 898.125 693.542969 925.195312 698.367188 942.347656 683.902344 C 951.417969 676.382812 955.953125 665.324219 955.953125 651.140625 C 955.953125 609.585938 976.363281 580.9375 976.648438 580.65625 C 979.03125 577.453125 977.945312 572.386719 974.523438 570.445312 C 974.523438 570.445312 936.109375 547.753906 936.109375 547.753906 L 976.929688 531.585938 C 980.476562 530.167969 982.316406 526.195312 980.902344 522.507812 C 980.476562 521.234375 969.984375 491.875 991.957031 483.082031 C 1002.019531 478.96875 1010.808594 475.566406 1017.894531 473.015625 C 1032.253906 468.148438 1037.78125 448.882812 1028.382812 436.992188 C 1028.382812 436.992188 970.980469 360.125 970.980469 360.125 Z M 970.980469 360.125 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#8b18ecefd5)"><path d="M 1065.085938 728.210938 C 1068.6875 730.015625 1073.035156 729.589844 1076.214844 727.042969 L 1269.328125 578.433594 C 1274.839844 574.503906 1274.839844 565.585938 1269.328125 561.660156 L 1076.214844 413.046875 C 1073.035156 410.605469 1068.6875 410.078125 1065.085938 411.878906 C 1061.480469 413.683594 1059.148438 417.402344 1059.148438 421.433594 L 1059.148438 718.65625 C 1059.148438 722.691406 1061.480469 726.40625 1065.085938 728.210938 Z M 1065.085938 728.210938 " fill-opacity="1" fill-rule="nonzero"/></g></svg>
+        </span>
+    </button>
+    <div class="col-auto m-2 d-flex align-items-center">
+        <label for="rate" class="mb-0 me-2">Velocità di lettura:</label>
+    <input type="number" id="rate" min="0.1" max="10" step="0.1" value="0.5" class="col-1 m-2 w-25 px-2 num-select"> 
+            </div>
+    <div class="row m-1 d-flex text-center">
+    <p>Clicca su una parola nel testo per indicare da dove vuoi avviare la lettura.</p>
+    </div>
+            </div>
+            <div class="row m-2 p-2">
+        <p id="text-to-speak" class="text shadow">L'accessibilità è un principio fondamentale che garantisce a tutte le persone, indipendentemente dalle loro abilità fisiche o cognitive, la possibilità di utilizzare e beneficiare delle tecnologie. In un mondo sempre più digitale, è essenziale che i siti web e le applicazioni siano progettati tenendo conto delle esigenze di tutti gli utenti. Promuovere l'accessibilità non solo migliora l'esperienza per gli utenti con disabilità, ma arricchisce anche l'intero ecosistema digitale, rendendo le informazioni disponibili a un pubblico più vasto.</p>
+            </div>
+        </section>
+
+        <section id="video" class="mx-3 mt-4 py-3 card shadow">
+            <div class="card-body">
+            <h2 class="mb-4 card-title">Video accessibile</h2>
+            <div class="row py-2 d-flex justify-content-center align-items-center">
+                <button id="muteBtn" aria-label="Disattiva audio" class="col-2 m-1">
+                <i class="bi bi-volume-mute-fill" id="muteIcon"></i>
+                </button>
+                <button id="volumeDownBtn" aria-label="Diminuisci volume audio" class="col-2 m-1"><i class="bi bi-volume-down-fill"></i></button>
+                <button id="volumeUpBtn" aria-label="Aumenta volume" class="col-2 m-1"><i class="bi bi-volume-up-fill"></i></button>
+            </div>
+            <div class="row py-2 d-flex justify-content-center">
+                <span id="currentVolume" class="col-12 text-center"> Volume: 50%</span>
+                    </div>
+            <div class="row d-flex justify-content-center align-items-center my-2">
+        <video id="Video" controls width="600" class="col-12 col-md-7 mb-3">
+            <source src="video.mp4" type="video/mp4">
+            <track id="subtitles"  src="Sottotitoli.it.vtt" kind="subtitles" srclang="it" label="Italiano" default>
+            <track id="subtitles-en" src="Sottotitoli.en.vtt" kind="subtitles" srclang="en" label="English">
+                </video>
+            </div>
+            <div class="row d-flex justify-content-between  flex-nowrap align-items-center px-4">
+                <select id="languageSelector" class="form-select col-2" aria-label="Seleziona la lingua">
+        <option value="it" selected>IT</option>
+        <option value="en">EN</option>
+    </select>
+        <button id="toggleSubtitles" class="toggle-btn col-4 h-25">Attiva Sottotitoli</button>
+        <button class="toggle-btn col-4 h-25" onclick="toggleTranscription()" id="toggleTranscription">Mostra Trascrizione</button>  
+                    </div>
+                
+        <div class="transcription p-4" id="transcription-it">
+            <p class="fw-semibold">Trascrizione del video:</p>
+            <p> <span class="transcript fw-semibold" data-time="0">0:00</span> WCAG è la sigla per</p>
+            <p> <span  class="transcript fw-semibold" data-time="2">0:02</span>  le linee guida per l'accessibilità dei contenuti Web,</p>
+            <p> <span  class="transcript fw-semibold" data-time="5">0:05</span>  pubblicate dal World Wide Web Consortium, Iniziativa per l'accessibilità web.</p>
+            <p> <span  class="transcript fw-semibold" data-time="10">0:10</span>  Forniscono linee guida e buone pratiche per rendere i contenuti digitali accessibili per tutti</p>
+            <p> <span  class="transcript fw-semibold" data-time="16">0:16</span>  incluso coloro con impedimenti visivi, uditivi, fisici, cognitivi e neurologici.</p>
+            <p> <span  class="transcript fw-semibold" data-time="22">0:22</span>  Le WCAG 2.1 copre una vasta gamma di argomenti</p>
+            <p> <span  class="transcript fw-semibold" data-time="25">0:25</span>  tra cui testi e immagini,</p>
+            <p> <span  class="transcript fw-semibold" data-time="27">0:27</span>  contenuti audio e video e tecnologie adattive tra gli altri.</p>
+            
+    </div>
+        <div class="transcription p-4" id="transcription-en">
+            <p class="fw-semibold">Video transcription:</p>
+            <p> <span class="transcript fw-semibold" data-time="0">0:00</span> WCAG stands for</p>
+            <p> <span  class="transcript fw-semibold" data-time="2">0:02</span>  Web Content Accessibility Guidelines,</p>
+            <p> <span  class="transcript fw-semibold" data-time="5">0:05</span>  which are published by the World Wide Web Consortium Web Accessibility Initiative</p>
+            <p> <span  class="transcript fw-semibold" data-time="10">0:10</span>  They provide guidelines and best practices for making web content accessible to everyone</p>
+            <p> <span  class="transcript fw-semibold" data-time="16">0:16</span>  including people with visual, auditory, physical, cognitive and neurological impairments.</p>
+            <p> <span  class="transcript fw-semibold" data-time="22">0:22</span>  WCAG 2.1 covers a wide range of topics</p>
+            <p> <span  class="transcript fw-semibold" data-time="25">0:25</span>  including text and images,</p>
+            <p> <span  class="transcript fw-semibold" data-time="27">0:27</span>  audio and video and adaptive technologies among others.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="chisiamo" class="mx-3 mb-3 mt-4">
+            <h1 class="mb-3">Chi siamo</h1>
+            <p>La nostra agenzia offre consulenze e soluzioni pratiche per rendere accessibile ogni genere di sito web.</p>
+            <p>All'interno del nostro sito sono presenti esempi pratici su come sia possibile rendere accessibile uno slideshow, un testo, un video e un form di contatto.</p>
+            <p>Il nostro team è sempre al lavoro per migliorare il proprio lavoro e offrire ai clienti la migliore soluzione possibile per ogni necessità.</p>
+            <p>Se sei interessato a metterti in contatto con noi chiamaci o apri la sezione Contatti del nostro menu.</p>
+            <p>Iscriviti alla nostra newsletter per ricevere consigli e aggiornamenti riguardo le leggi di accessibilità web.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+        <footer class="container-footer footer full-width d-grid mt-5"> 
+    <div class="row d-flex p-4">
+    <div class="col-2 ms-3 mt-4">
+    <p><a aria-label="Link a Facebook" class="icon-link icon-link-hover"  href="https://it-it.facebook.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+        </svg>
+    </a></p>
+    <p><a aria-label="Link a Instagram" class="icon-link icon-link-hover" href="https://www.instagram.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg>
+    </a></p>
+    <p><a aria-label="Link a Twitter" class="icon-link icon-link-hover" href="https://twitter.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+        </svg>
+    </a></p>
+    <p><a aria-label="Link a Telegram" class="icon-link icon-link-hover" href="https://web.telegram.org/k/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+        </svg>
+    </a></p>
+    <p><a aria-label="Link a Whatsapp" class="icon-link icon-link-hover" href="https://web.whatsapp.com" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+        </svg>
+    </a></p>
+</div>
+    <div class="col-auto me-3 mt-3">
+<div class="form-group">
+    <p>Iscriviti alla newsletter</p>
+    <input id="newsletter" name="email" type="email" class="form-control footer-form" placeholder="Email" required="required"
+            data-error="Necessario inserire un indirizzo email valido">
+    <p id="emailHelp" class="form-text ms-1">Il tuo indirizzo email non verrà diffuso a terzi</p>
+    <p><button class="footerbutton" data-bs-toggle="modal" data-bs-target="#myModal" type="button" id="button" value="Iscriviti"> Iscriviti </button></p> 
+</div>            
+</div>
+</div>
+
+</footer> 
+    
+    <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="ModalLabel" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="ModalLabel">Congratulazioni! </h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+                </div>
+            <div class="modal-body"> 
+            <p>L'iscrizione è avvenuta con successo! </p><p>D'ora in poi riceverai le ultime novità direttamente sulla tua casella di posta</p><p> Il tuo indirizzo email non verrà condiviso a terzi. </p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" data-bs-dismiss="modal">Chiudi</button>
+            </div>
+        </div>
+        </div>
+    </div> 
+    
+<section class="btn-row px-4" aria-labelledby="section-info" aria-describedby="section-desc">
+    <div class="row py-3 px-3 d-flex justify-content-center align-items-center  flex-column text-center">
+        <h1 id="section-info" class="d-none">Informazioni importanti</h1>
+        <p id="section-desc">Questo sito è gestito da AV Agency, con sede in Via Caffaro 22, Genova, 16124, Italia</p>
+        <p>Telefono <a href="tel:+390105568729" aria-label="Chiama il numero +39 010 556 8729"> +39 010 556 8729</a>, email <a href="mailto:av.agency@hotmail.it" aria-label="Invia un'email ad av.agency@hotmail.it">av.agency@hotmail.it</a></p>
+        <p class="py-2"> <a href="https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/36573" target="_blank" rel="noopener noreferrer" aria-label="Consulta la Privacy Policy">Privacy Policy</a> – <a href="https://www.garanteprivacy.it/faq/cookie" target="_blank" rel="noopener noreferrer" aria-label="Consulta la Cookie Policy">Cookie Policy</a></p>
+        <p>Questo sito è progettato per garantire la massima accessibilità, in conformità con le linee guida <a href="https://www.w3.org/Translations/WCAG21-it/" target="_blank" rel="noopener noreferrer" aria-label="Consulta le linee guida WCAG 2.1 per l'accessibilità dei contenuti web">WCAG 2.1.(Linee guida per l'accessibilità dei contenuti web)</a></p>
+        <p>Tutti i contenuti presenti su questo sito sono di proprietà di AV Agency e protetti dalla normativa sul diritto d’autore. L’azienda non è responsabile di eventuali errori o omissioni.</p>
+        <p>Per segnalazioni o controversie relative ai servizi offerti, è possibile utilizzare la piattaforma <a href="https://conciliaweb.agcom.it/conciliaweb/login.htm" target="_blank" rel="noopener noreferrer" aria-label="Vai alla piattaforma ConciliaWeb di AGCOM">ConciliaWeb di AGCOM</a>.</p>
+    </div>
+    </section>
+    
+    <script>
+        
+        
+        //Tooltip
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+   
+        //Menu        
+        document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const bsCollapse = new bootstrap.Collapse(document.getElementById('main-menu'), {
+                toggle: false
+            });
+            if (menuToggle.getAttribute('aria-expanded') === 'true') {
+                bsCollapse.hide();
+            }
+        });
+    });
+        
+        //Sections
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - navbarHeight,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+        
+         //Bottone footer
+        let input = document.querySelector(".footer-form");
+        let Fbutton = document.querySelector(".footerbutton");
+    
+        Fbutton.disabled = true;
+    
+        input.addEventListener("change",stateHandle);
+    
+        function stateHandle(){
+        if (document.querySelector(".footer-form").value === "") {
+        Fbutton.disabled = true;
+        } else {
+        Fbutton.disabled = false;
+    }
+}
+        
+        //Slider
+        let currentIndex = 0;
+        let isSliderPaused = false;
+        let slideInterval;
+        let currentScale = 1; 
+
+const slides = document.querySelectorAll('.carousel-item');
+const indicators = document.querySelectorAll('.carousel-indicators button');
+const totalSlides = slides.length;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? 'block' : 'none';
+        slide.style.opacity = (i === index) ? '1' : '0';
+    });
+
+    indicators.forEach((indicator, i) => {
+        indicator.classList.toggle('active', i === index);
+    });
+
+    currentScale = 1; 
+    const currentImage = slides[index].querySelector('.image');
+    currentImage.style.transform = `scale(${currentScale})`; 
+}
+
+function changeSlide(direction) {
+    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+    showSlide(currentIndex);
+}
+
+function toggleSliderPause() {
+    isSliderPaused = !isSliderPaused;
+    const pauseButton = document.querySelector('.slider-pause');
+    if (isSliderPaused) {
+        clearInterval(slideInterval);
+        pauseButton.textContent = 'Riprendi';
+    } else {
+        startSlideShow();
+        pauseButton.textContent = 'Pausa';
+    }
+}
+
+function startSlideShow() {
+    slideInterval = setInterval(() => {
+        changeSlide(1);
+    }, 5000);
+}
+
+window.onload = function() {
+    showSlide(currentIndex);
+    startSlideShow();
+};
+
+function zoomImage(action) {
+    const currentImage = slides[currentIndex].querySelector('.image'); 
+    
+    if (action === 'in') {
+        currentScale += 0.1; 
+    } else if (action === 'out' && currentScale > 0.2) { 
+        currentScale -= 0.1;
+    }
+    
+    currentImage.style.transform = `scale(${currentScale})`;
+    currentImage.style.transition = "transform 0.2s"; 
+}
+        
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        currentIndex = index; 
+        showSlide(currentIndex);
+         if (!isSliderPaused) {
+            clearInterval(slideInterval);
+            startSlideShow();
+        }
+    });
+});
+        
+        
+         // Lettura ad alta voce
+let speechPaused = false;
+let utterance;
+let currentWordIndex = -1;
+const textElement = document.getElementById('text-to-speak');
+const originalText = textElement.innerText;
+let words = originalText.split(' ');
+let currentLanguage = 'it-IT';
+
+function changeLanguage(selectedValue) {
+    if (selectedValue.includes('It')) {
+        currentLanguage = 'it-IT';
+        document.documentElement.lang = 'it';
+        console.log('Lingua impostata su Italiano');
+    } else if (selectedValue.includes('En')) {
+        currentLanguage = 'en-GB';
+        document.documentElement.lang = 'en';
+        console.log('Lingua impostata su Inglese');
+    }
+}
+
+function createWordElements() {
+    textElement.innerHTML = '';
+
+    words.forEach((word, i) => {
+        const wordSpan = document.createElement('span');
+        wordSpan.className = 'word';
+        wordSpan.textContent = word;
+        wordSpan.setAttribute('data-index', i);
+
+        wordSpan.addEventListener('click', (e) => {
+            const index = parseInt(e.target.getAttribute('data-index'));
+            if (speechSynthesis.speaking) {
+                speechSynthesis.cancel();
+            }
+            startReading(index);
+        });
+
+        textElement.appendChild(wordSpan);
+        textElement.appendChild(document.createTextNode(' '));
+    });
+}
+
+function startReading(startIndex = 0) {
+    const rate = parseFloat(document.getElementById('rate').value);
+    if (speechSynthesis.speaking) {
+        if (speechSynthesis.paused) {
+            speechSynthesis.resume();
+            speechPaused = false;
+        } else {
+            speechSynthesis.pause();
+            speechPaused = true;
+        }
+        togglePauseButtonIcon(speechPaused);
+    } else {
+        if (startIndex >= words.length) {
+            startIndex = 0;
+        }
+        const textToRead = words.slice(startIndex).join(' ');
+        utterance = new SpeechSynthesisUtterance(textToRead);
+        utterance.rate = rate;
+        utterance.lang = currentLanguage;
+        const voices = speechSynthesis.getVoices();
+        const voice = voices.find(v => v.lang.startsWith(currentLanguage));
+        if (voice) {
+            utterance.voice = voice;
+        }
+        utterance.onstart = function() {
+            currentWordIndex = startIndex;
+        };
+        utterance.onend = function() {
+            speechPaused = false;
+            togglePauseButtonIcon(false);
+        };
+        speechSynthesis.speak(utterance);
+        togglePauseButtonIcon(false);
+    }
+}
+
+createWordElements();
+
+textElement.addEventListener('mouseover', (e) => {
+    if (e.target.classList.contains('word')) {
+        e.target.style.textDecoration = 'underline';
+    }
+});
+
+textElement.addEventListener('mouseout', (e) => {
+    if (e.target.classList.contains('word')) {
+        e.target.style.textDecoration = 'none';
+    }
+});
+
+
+// Icona lettura
+function togglePauseButtonIcon(paused) {
+    const pauseIcon = document.getElementById('pause-icon');
+    pauseIcon.innerHTML = paused
+        ? `<svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" zoomAndPan="magnify" viewBox="0 0 1600 1000" fill="currentColor" height="50"  preserveAspectRatio="xMidYMid meet" version="1.0"><g clip-path="url(#8af722a07a)"><path d="M 970.980469 360.125 L 970.980469 348.355469 C 974.664062 341.972656 983.734375 321.976562 978.066406 287.371094 C 973.386719 257.730469 965.734375 240.851562 961.90625 233.621094 C 967.433594 223.265625 977.640625 195.046875 949.71875 156.46875 C 844.652344 45.597656 433.210938 21.378906 407.5625 327.367188 C 400.046875 425.363281 442.144531 526.054688 517.691406 590.441406 C 517.976562 590.726562 554.96875 623.484375 512.589844 779.914062 C 511.316406 784.21875 514.808594 789.050781 519.394531 788.847656 C 519.394531 788.847656 798.761719 788.847656 798.761719 788.847656 C 801.03125 788.847656 803.15625 787.855469 804.574219 786.011719 C 805.851562 784.027344 806.132812 781.757812 805.425781 779.488281 C 796.210938 752.542969 785.441406 703.898438 795.503906 688.296875 C 797.457031 685.269531 800.242188 684.054688 803.726562 683.757812 C 847.804688 691.84375 894.582031 693.402344 896.992188 693.402344 C 898.125 693.542969 925.195312 698.367188 942.347656 683.902344 C 951.417969 676.382812 955.953125 665.324219 955.953125 651.140625 C 955.953125 609.585938 976.363281 580.9375 976.648438 580.65625 C 979.03125 577.453125 977.945312 572.386719 974.523438 570.445312 C 974.523438 570.445312 936.109375 547.753906 936.109375 547.753906 L 976.929688 531.585938 C 980.476562 530.167969 982.316406 526.195312 980.902344 522.507812 C 980.476562 521.234375 969.984375 491.875 991.957031 483.082031 C 1002.019531 478.96875 1010.808594 475.566406 1017.894531 473.015625 C 1032.253906 468.148438 1037.78125 448.882812 1028.382812 436.992188 C 1028.382812 436.992188 970.980469 360.125 970.980469 360.125 Z M 970.980469 360.125 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#8b18ecefd5)"><path d="M 1065.085938 728.210938 C 1068.6875 730.015625 1073.035156 729.589844 1076.214844 727.042969 L 1269.328125 578.433594 C 1274.839844 574.503906 1274.839844 565.585938 1269.328125 561.660156 L 1076.214844 413.046875 C 1073.035156 410.605469 1068.6875 410.078125 1065.085938 411.878906 C 1061.480469 413.683594 1059.148438 417.402344 1059.148438 421.433594 L 1059.148438 718.65625 C 1059.148438 722.691406 1061.480469 726.40625 1065.085938 728.210938 Z M 1065.085938 728.210938 " fill-opacity="1" fill-rule="nonzero"/></g></svg>`
+        : `<svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" zoomAndPan="magnify" viewBox="0 0 1600 900" fill="currentColor" height="50" preserveAspectRatio="xMidYMid meet" version="1.0"><g clip-path="url(#af3ca8a423)"><path d="M 970.980469 360.125 L 970.980469 348.355469 C 974.664062 341.972656 983.734375 321.976562 978.066406 287.371094 C 973.386719 257.730469 965.734375 240.851562 961.90625 233.621094 C 967.433594 223.265625 977.640625 195.046875 949.71875 156.46875 C 844.652344 45.597656 433.210938 21.378906 407.5625 327.367188 C 400.046875 425.363281 442.144531 526.054688 517.691406 590.441406 C 517.976562 590.726562 554.96875 623.484375 512.589844 779.914062 C 511.316406 784.21875 514.808594 789.050781 519.394531 788.847656 C 519.394531 788.847656 798.761719 788.847656 798.761719 788.847656 C 801.03125 788.847656 803.15625 787.855469 804.574219 786.011719 C 805.851562 784.027344 806.132812 781.757812 805.425781 779.488281 C 796.210938 752.542969 785.441406 703.898438 795.503906 688.296875 C 797.457031 685.269531 800.242188 684.054688 803.726562 683.757812 C 847.804688 691.84375 894.582031 693.402344 896.992188 693.402344 C 898.125 693.542969 925.195312 698.367188 942.347656 683.902344 C 951.417969 676.382812 955.953125 665.324219 955.953125 651.140625 C 955.953125 609.585938 976.363281 580.9375 976.648438 580.65625 C 979.03125 577.453125 977.945312 572.386719 974.523438 570.445312 C 974.523438 570.445312 936.109375 547.753906 936.109375 547.753906 L 976.929688 531.585938 C 980.476562 530.167969 982.316406 526.195312 980.902344 522.507812 C 980.476562 521.234375 969.984375 491.875 991.957031 483.082031 C 1002.019531 478.96875 1010.808594 475.566406 1017.894531 473.015625 C 1032.253906 468.148438 1037.78125 448.882812 1028.382812 436.992188 C 1028.382812 436.992188 970.980469 360.125 970.980469 360.125 Z M 970.980469 360.125 " fill-opacity="1" fill-rule="nonzero"/></g><path d="M 1092.789062 721.035156 C 1083.808594 721.035156 1076.457031 713.6875 1076.457031 704.703125 L 1076.457031 440.074219 C 1076.457031 431.089844 1083.808594 423.738281 1092.789062 423.738281 C 1101.773438 423.738281 1109.121094 431.089844 1109.121094 440.074219 L 1109.121094 704.703125 C 1109.121094 713.6875 1101.773438 721.035156 1092.789062 721.035156 Z M 1092.789062 721.035156 " fill-opacity="1" fill-rule="nonzero"/><path d="M 1184.738281 721.035156 C 1175.757812 721.035156 1168.40625 713.6875 1168.40625 704.703125 L 1168.40625 440.074219 C 1168.40625 431.089844 1175.757812 423.738281 1184.738281 423.738281 C 1193.722656 423.738281 1201.070312 431.089844 1201.070312 440.074219 L 1201.070312 704.703125 C 1201.070312 713.6875 1193.722656 721.035156 1184.738281 721.035156 Z M 1184.738281 721.035156 " fill-opacity="1" fill-rule="nonzero"/></svg>` ; 
+}
+        
+
+        
+        // Volume Video
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('Video');
+            const muteBtn = document.getElementById('muteBtn');
+            const muteIcon = document.getElementById('muteIcon');
+            const volumeUpBtn = document.getElementById('volumeUpBtn');
+            const volumeDownBtn = document.getElementById('volumeDownBtn');
+            const currentVolumeText = document.getElementById('currentVolume');
+
+            let isMuted = false;
+            let currentVolume = 0.5;
+
+            video.volume = currentVolume;
+            currentVolumeText.textContent = `Volume: ${Math.round(currentVolume * 100)}%`;
+
+            // Mutare o riattivare il suono
+            muteBtn.addEventListener('click', () => {
+                isMuted = !isMuted;
+                video.muted = isMuted;
+               
+                if (isMuted) {
+                    muteIcon.classList.remove('bi-volume-mute-fill');
+                    muteIcon.classList.add('bi-volume-off-fill'); 
+                    currentVolumeText.textContent = 'Volume: 0%';
+                } else {
+                    muteIcon.classList.remove('bi-volume-off-fill');
+                    muteIcon.classList.add('bi-volume-mute-fill');
+                    video.volume = currentVolume;
+                    currentVolumeText.textContent = `Volume: ${Math.round(currentVolume * 100)}%`;
+                }
+            });
+
+            // Aumentare il volume
+            volumeUpBtn.addEventListener('click', () => {
+                if (currentVolume < 1) {
+                    currentVolume = Math.min(currentVolume + 0.1, 1); 
+                    video.volume = currentVolume;
+                    currentVolumeText.textContent = `Volume: ${Math.round(currentVolume * 100)}%`;
+                }
+            });
+             
+            // Diminuire il volume 
+            volumeDownBtn.addEventListener('click', () => {
+                if (currentVolume > 0) {
+                    currentVolume = Math.max(currentVolume - 0.1, 0); 
+                    video.volume = currentVolume;
+                    currentVolumeText.textContent = `Volume: ${Math.round(currentVolume * 100)}%`;
+                }
+            });
+        });
+        
+         
+        //Sottotitoli e trascrizione
+   document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('Video');
+    const subtitleTracks = video.textTracks;
+    const languageSelector = document.getElementById('languageSelector');
+    const SubBtn = document.getElementById('toggleSubtitles');
+    const toggleTranscription = document.getElementById('toggleTranscription');
+    const transcriptionIt = document.getElementById('transcription-it');
+    const transcriptionEn = document.getElementById('transcription-en');
+
+Array.from(subtitleTracks).forEach(track => (track.mode = 'disabled')); 
+
+    function updateLanguage() {
+    const selectedLang = languageSelector.value;
+
+    Array.from(subtitleTracks).forEach(track => {
+        track.mode = track.language === selectedLang && SubBtn.classList.contains('active')
+            ? 'showing'
+            : 'disabled';
+    });
+
+    const showTranscription = toggleTranscription.classList.contains('active');
+
+    transcriptionIt.classList.remove('active');
+    transcriptionEn.classList.remove('active');
+
+    if (showTranscription) {
+        if (selectedLang === 'it') {
+            transcriptionIt.classList.add('active');
+        } else if (selectedLang === 'en') {
+            transcriptionEn.classList.add('active');
+        }
+    }
+}
+
+    // Cambia la lingua dei sottotitoli
+    languageSelector.addEventListener('change', () => {
+        updateLanguage();
+    });
+
+    // Mostra/Nasconde i sottotitoli
+    SubBtn.addEventListener('click', () => {
+        const areSubtitlesActive = SubBtn.classList.contains('active');
+        if (areSubtitlesActive) {
+            SubBtn.textContent = 'Attiva Sottotitoli';
+            SubBtn.classList.remove('active');
+        } else {
+            SubBtn.textContent = 'Disattiva Sottotitoli';
+            SubBtn.classList.add('active');
+        }
+
+        updateLanguage();
+    });
+
+    // Mostra/Nasconde la trascrizione
+    toggleTranscription.addEventListener('click', () => {
+        const areTranscriptionsActive = toggleTranscription.classList.contains('active');
+        if (areTranscriptionsActive) {
+            toggleTranscription.textContent = 'Mostra Trascrizione';
+            toggleTranscription.classList.remove('active');
+        } else {
+            toggleTranscription.textContent = 'Nascondi Trascrizione';
+            toggleTranscription.classList.add('active');
+        }
+
+        updateLanguage();
+    });
+
+    updateLanguage();
+});
+   
+       //Trascrizione
+        document.addEventListener('DOMContentLoaded', function () {
+    const video = document.getElementById('Video');
+    const transcriptItems = document.querySelectorAll('.transcript');
+
+    
+    transcriptItems.forEach(item => {
+        item.addEventListener('click', function () {
+            const time = this.getAttribute('data-time');
+            video.currentTime = time;
+            video.play(); 
+        });
+    });
+});
+        
+        document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('Video');
+    const languageSelector = document.getElementById('languageSelector');
+
+    function loadSubtitles(language) {
+        const existingTrack = video.querySelector('track');
+        if (existingTrack) {
+            video.removeChild(existingTrack);
+        }
+
+        const track = document.createElement('track');
+        track.kind = 'subtitles';
+        track.label = language === 'it' ? 'Italiano' : 'English';
+        track.srclang = language;
+
+        const base64VTT_IT = 'data:text/vtt;base64,V0VCVlRUDQoNCg0KMDA6MDA6MDAuMDAwIC0tPiAwMDowMDowMS41OTANCldDQUcgw6ggbGEgc2lnbGEgcGVyDQoNCjAwOjAwOjAyLjAwMCAtLT4gMDA6MDA6MDQuNTgwDQpsZSBsaW5lZSBndWlkYSBwZXIgbCdhY2Nlc3NpYmlsaXTDoCBkZWkgY29udGVudXRpIFdlYiwNCg0KMDA6MDA6MDUuMDAwIC0tPiAwMDowMDowOS41NTANCnB1YmJsaWNhdGUgZGFsIFdvcmxkIFdpZGUgV2ViIENvbnNvcnRpdW0gDQpJbml6aWF0aXZhIHBlciBsJ2FjY2Vzc2liaWxpdMOgIHdlYi4NCg0KMDA6MDA6MTAuMDAwIC0tPiAwMDowMDoxNS41NTANCkZvcm5pc2Nvbm8gbGluZWUgZ3VpZGEgZSBidW9uZSBwcmF0aWNoZSANCnBlciByZW5kZXJlIGkgY29udGVudXRpIGRpZ2l0YWxpIGFjY2Vzc2liaWxpIHBlciB0dXR0aQ0KDQowMDowMDoxNS41OTAgLS0+IDAwOjAwOjIxLjU1MA0KaW5jbHVzbyBjb2xvcm8gY29uIGltcGVkaW1lbnRpIA0KdmlzaXZpLCB1ZGl0aXZpLCBmaXNpY2ksIGNvZ25pdGl2aSBlIG5ldXJvbG9naWNpLg0KDQowMDowMDoyMi4wMDAgLS0+IDAwOjAwOjI0LjUwMA0KTGUgV0NBRyAyLjEgY29wcmUgdW5hIHZhc3RhIGdhbW1hIGRpIGFyZ29tZW50aQ0KDQowMDowMDoyNS4wMDAgLS0+IDAwOjAwOjI2LjU1MA0KdHJhIGN1aSB0ZXN0aSBlIGltbWFnaW5pLA0KDQowMDowMDoyNy4wMDAgLS0+IDAwOjAwOjMwLjAwMA0KY29udGVudXRpIGF1ZGlvIGUgdmlkZW8gZSB0ZWNub2xvZ2llIGFkYXR0aXZlIHRyYSBnbGkgYWx0cmkuDQo='; 
+        const base64VTT_EN = 'data:text/vtt;base64,V0VCVlRUDQoNCg0KMDA6MDA6MDAuMDAwIC0tPiAwMDowMDowMS41OTANCldDQUcgc3RhbmRzIGZvcg0KDQowMDowMDowMi4wMDAgLS0+IDAwOjAwOjA0LjU4MA0KV2ViIENvbnRlbnQgQWNjZXNzaWJpbGl0eSBHdWlkZWxpbmVzLA0KDQowMDowMDowNS4wMDAgLS0+IDAwOjAwOjA5LjU1MA0Kd2hpY2ggYXJlIHB1Ymxpc2hlZCBieSANCnRoZSBXb3JsZCBXaWRlIFdlYiBDb25zb3J0aXVtIA0KV2ViIEFjY2Vzc2liaWxpdHkgSW5pdGlhdGl2ZQ0KDQowMDowMDoxMC4wMDAgLS0+IDAwOjAwOjE1LjU1MA0KVGhleSBwcm92aWRlIGd1aWRlbGluZXMgYW5kIGJlc3QgcHJhY3RpY2VzIA0KZm9yIG1ha2luZyB3ZWIgY29udGVudCBhY2Nlc3NpYmxlIHRvIGV2ZXJ5b25lDQoNCjAwOjAwOjE1LjU5MCAtLT4gMDA6MDA6MjEuNTUwDQppbmNsdWRpbmcgcGVvcGxlIHdpdGggDQp2aXN1YWwsIGF1ZGl0b3J5LCBwaHlzaWNhbCwgY29nbml0aXZlIGFuZCBuZXVyb2xvZ2ljYWwgaW1wYWlybWVudHMuDQoNCjAwOjAwOjIyLjAwMCAtLT4gMDA6MDA6MjQuNTAwDQpXQ0FHIDIuMSBjb3ZlcnMgYSB3aWRlIHJhbmdlIG9mIHRvcGljcw0KDQowMDowMDoyNS4wMDAgLS0+IDAwOjAwOjI2LjU1MA0KaW5jbHVkaW5nIHRleHQgYW5kIGltYWdlcywNCg0KMDA6MDA6MjcuMDAwIC0tPiAwMDowMDozMC4wMDANCmF1ZGlvIGFuZCB2aWRlbyBhbmQgYWRhcHRpdmUgdGVjaG5vbG9naWVzIGFtb25nIG90aGVycy4NCg=='; 
+
+        const fileData = language === 'it' ? base64VTT_IT : base64VTT_EN;
+
+        fetch(fileData)
+            .then(response => response.text())
+            .then(data => {
+                console.log('File VTT caricato con successo');
+                const trackBlob = new Blob([data], { type: 'text/vtt' });
+                const trackURL = URL.createObjectURL(trackBlob);
+                track.src = trackURL;
+                video.appendChild(track);
+            })
+            .catch(err => {
+                console.error('Errore durante il caricamento dei sottotitoli:', err);
+            });
+    }
+
+    loadSubtitles('it');
+
+    languageSelector.addEventListener('change', (event) => {
+        const selectedLang = event.target.value;
+        console.log(`Lingua selezionata: ${selectedLang}`);
+        loadSubtitles(selectedLang);
+    });
+});
+
+
+        //Menu
+        const navButton = document.getElementById("menu-toggle");
+        const disclosure = document.getElementById("main-menu");
+        const listItems = disclosure.querySelectorAll("li a");
+
+        function openNavigation() {
+          navButton.setAttribute("aria-expanded", "true");
+          disclosure.classList.remove("hidden");
+        }
+
+        function closeNavigation() {
+          navButton.setAttribute("aria-expanded", "false");
+          disclosure.classList.add("hidden");
+        }
+
+        function toggleNavigation() {
+          const open = navButton.getAttribute("aria-expanded");
+          open === "false" ? openNavigation() : closeNavigation();
+        }
+
+        function handleBlur() {
+          const navList = event.currentTarget.closest(".primaryNavList");
+          if (!event.relatedTarget || !navList.contains(event.relatedTarget)) {
+            closeNavigation();
+          }
+        }
+
+        navButton.addEventListener("click", toggleNavigation);
+
+        listItems[listItems.length - 1].addEventListener("blur", handleBlur);
+
+        window.addEventListener("keyup", (e) => {
+          if (e.key === "Escape") {
+            navButton.focus();
+            closeNavigation();
+          }
+        });
+
+        
+        //Pulsanti da replicare
+        let baseFontSize = 1.15;
+        let isHighContrast = false;
+
+        const content = document.getElementById('home');
+        
+        
+        // Modalità alto contrasto
+        function toggleContrast() {
+            isHighContrast = document.body.classList.toggle('high-contrast');
+    
+            if (isHighContrast) {
+        content.dataset.originalColor = content.style.color;
+    } else {
+        if (userSelectedColor) {
+            content.style.color = previousUserColor; 
+        } else {
+            content.style.color = '';
+        }
+    }
+}
+
+        
+         //Ridimensionamento testo
+const scalingFactors = {
+    'p': 1,       
+    'h1': 2,      
+    'h2': 1.75,   
+    'h3': 1.5,    
+    'ul, li': 1,  
+    'label': 1, 
+    'button': 1,  
+    '.form-control': 1 
+};
+
+document.getElementById('increase-font').addEventListener('click', function () {
+    baseFontSize += 0.1; 
+    setFontSize(baseFontSize);
+});
+
+document.getElementById('decrease-font').addEventListener('click', function () {
+    if (baseFontSize > 0.5) { 
+        baseFontSize -= 0.1; 
+        setFontSize(baseFontSize);
+    }
+});
+
+function setFontSize(size) {
+    for (const [selector, factor] of Object.entries(scalingFactors)) {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(function (el) {
+            el.style.fontSize = (size * factor) + 'rem';
+        });
+    }
+}
+
+        
+        //Lingua pagina 
+        function changeLanguage(value) {
+    window.location.href = value; 
+}
+     
+       
+    </script>
+
+</body>
+</html>
